@@ -1,8 +1,9 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import './App.css';
+
 import { Component } from './Component';
 
-export function App() {
-
+function App() {
   return (
     <Router>
         <Routes>
