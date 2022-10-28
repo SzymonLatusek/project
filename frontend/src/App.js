@@ -1,14 +1,14 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 
-import { Component } from './Component';
+import IAppShell from './IAppShell';
 import SubjectInfo from './Subjects';
 
-function App() {
+export function App() {
   return (
     <Router>
         <Routes>
-          <Route path={'/'} element={<Component />} />
+          <Route path={'/'} element={<IAppShell />} />
 
           <Route path={'/subjects'} element={<div></div>} />
           <Route path={'/subject/:name'} element={<SubjectInfo />} />
