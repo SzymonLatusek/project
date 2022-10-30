@@ -6,11 +6,10 @@ import IAppShell from './IAppShell';
 import SubjectInfo from './Subjects';
 
 export function App() {
-  let XD ='JB';
-  // const [contain, setContain] = useState("JB")
   return (
     <Router>
         <Routes>
+          <Route path={'/'} element={<IAppShell admin={false} contain={<div>main</div>} />} />
           <Route path={'subjects'} element={<IAppShell admin={false} contain={<div>subject</div>} />} />
           <Route path={'subject/:name'} element={<IAppShell admin={false} contain={<SubjectInfo />} />}/>
 
