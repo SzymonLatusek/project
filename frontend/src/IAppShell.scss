@@ -1,3 +1,5 @@
+@import './colors.scss';
+
 @media (max-width: 1200px) and (min-width: 768px) {
     .mantine-AppShell-main{
         padding-left: 316px;
@@ -9,6 +11,30 @@
         width: 100vw;
     }
 }
+
+header.mantine-Header-root{
+    background-color: $mainColor;
+    .logo{
+        margin: auto;
+        height: 68px;
+    }
+    @media (max-width: 767px) {
+        .logo{
+            height: 28px;
+        }
+    }
+}
+
+nav.mantine-Navbar-root {
+    background-color: $secondColor;
+}
+
+footer.mantine-Footer-root{
+    background-color: $mainColor;
+    color: white;
+    text-align: center;
+}
+
 
 .mantine-Navbar-root{
     height: calc(100vh - var(--mantine-header-height, 0px) - var(--mantine-footer-height, 0px));

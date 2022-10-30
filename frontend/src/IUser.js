@@ -37,7 +37,7 @@ export function IUser() {
             <Text size="sm" weight={500}>
               Maciej Kowalski
             </Text>
-            <Text color="dimmed" size="xs">
+            <Text size="xs">
               zwykły użytkownik
             </Text>
           </Box>

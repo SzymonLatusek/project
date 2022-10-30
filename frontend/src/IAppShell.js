@@ -8,7 +8,9 @@ import {
   MediaQuery,
   Burger,
   useMantineTheme,
+  Image,
 } from '@mantine/core';
+import logo from "./img/inwentarzor-logo.png";
 
 import { IUser } from './IUser';
 import { IUserLinks } from './IUserLinks';
@@ -43,12 +45,13 @@ export function IAppShell(props) {
         </Navbar>
       }
       footer={
-        <Footer height={60} p="md">
-          Footer
+        <Footer height={80} p="md">
+          @2022 Projekt Aplikacje Internetowe 2 <br/>
+          JF, JJ, SC, SL
         </Footer>
       }
       header={
-        <Header height={70} p="md">
+        <Header height={100} p="md">
           <div style={{ display: 'flex', alignItems: 'center', height: '100%' }}>
             <MediaQuery largerThan="sm" styles={{ display: 'none' }}>
               <Burger
@@ -60,7 +63,7 @@ export function IAppShell(props) {
               />
             </MediaQuery>
 
-            <Text>Header</Text>
+            <img src={logo} alt="logo" className='logo' />
           </div>
         </Header>
       }

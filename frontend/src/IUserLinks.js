@@ -29,7 +29,7 @@ function IUserLink({ icon, color, label, href }) {
           {icon}
         </ThemeIcon>
 
-        <Text size="sm">{label}</Text>
+        <Text size="md" weight={600}>{label}</Text>
       </Group>
     </UnstyledButton>
   );
