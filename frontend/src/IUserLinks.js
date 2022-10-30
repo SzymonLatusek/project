@@ -29,14 +29,22 @@ function IUserLink({ icon, color, label }) {
   );
 }
 
-const data = [
+const userData = [
   { icon: <IconBooks size={16} />, color: 'violet', label: 'Przedmioty' },
   { icon: <IconDoor size={16} />, color: 'grape', label: 'Pomieszczenia' },
   { icon: <IconSchool size={16} />, color: 'red', label: 'Wydziały' },
   { icon: <IconBallpen size={16} />, color: 'blue', label: 'Zgłoszenia' },
 ];
 
-export function IUserLinks() {
-  const links = data.map((link) => <IUserLink {...link} key={link.label} />);
-  return <div>{links}</div>;
+const adminData = [
+  { icon: <IconBooks size={16} />, color: 'violet', label: 'A' },
+  { icon: <IconDoor size={16} />, color: 'grape', label: 'B' },
+  { icon: <IconSchool size={16} />, color: 'red', label: 'C' },
+  { icon: <IconBallpen size={16} />, color: 'blue', label: 'D' },
+];
+
+export function IUserLinks(props) {
+  const userLinks = userData.map((link) => <IUserLink {...link} key={link.label} />);
+  const adminLinks = adminData.map((link) => <IUserLink {...link} key={link.label} />);
+  return <div>{props.admin === true ? adminLinks : userLinks}</div>;
 }

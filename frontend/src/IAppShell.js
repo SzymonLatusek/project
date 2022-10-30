@@ -15,7 +15,7 @@ import { IUserLinks } from './IUserLinks';
 
 import './IAppShell.scss';
 
-export function IAppShell() {
+export function IAppShell(props) {
   const theme = useMantineTheme();
   const [opened, setOpened] = useState(false);
   return (
@@ -34,7 +34,7 @@ export function IAppShell() {
                 {/* <Brand /> */}
             </Navbar.Section>
             <Navbar.Section grow mt="md">
-                <IUserLinks />
+                <IUserLinks admin={props.admin} />
             </Navbar.Section>
             <Navbar.Section>
                 <IUser />
