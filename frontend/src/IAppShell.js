@@ -65,7 +65,7 @@ export function IAppShell(props) {
         </Header>
       }
     >
-      <Text>Strona głóna</Text>
+      <Text>{props.contain}</Text>
     </AppShell>
   );
 }
