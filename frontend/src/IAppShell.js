@@ -13,6 +13,8 @@ import {
 import { IUser } from './IUser';
 import { IUserLinks } from './IUserLinks';
 
+import './IAppShell.scss';
+
 export function IAppShell() {
   const theme = useMantineTheme();
   const [opened, setOpened] = useState(false);

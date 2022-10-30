@@ -33,7 +33,7 @@ const data = [
   { icon: <IconBooks size={16} />, color: 'violet', label: 'Przedmioty' },
   { icon: <IconDoor size={16} />, color: 'grape', label: 'Pomieszczenia' },
   { icon: <IconSchool size={16} />, color: 'red', label: 'Wydziały' },
-  { icon: <IconBallpen size={16} />, color: 'blue', label: 'Przypis do wydziału' },
+  { icon: <IconBallpen size={16} />, color: 'blue', label: 'Zgłoszenia' },
 ];
 
 export function IUserLinks() {

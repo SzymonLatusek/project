@@ -1,0 +1,15 @@
+@media (max-width: 1200px) and (min-width: 768px) {
+    .mantine-AppShell-main{
+        padding-left: 316px;
+    }
+}
+
+@media (max-width: 767px) {
+    .mantine-Navbar-root{
+        width: 100vw;
+    }
+}
+
+.mantine-Navbar-root{
+    height: calc(100vh - var(--mantine-header-height, 0px) - var(--mantine-footer-height, 0px));
+}
