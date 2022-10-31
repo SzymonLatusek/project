@@ -10,12 +10,12 @@ import {
   Burger,
   useMantineTheme,
 } from '@mantine/core';
-import logo from "./img/inwentarzor-logo.png";
+import logo from "../img/inwentarzor-logo.png";
 
 import { IUser } from './IUser';
 import { IUserLinks } from './IUserLinks';
 
-import './IAppShell.scss';
+import '../styles/IAppShell.scss';
 
 export function IAppShell(props) {
   const theme = useMantineTheme();
@@ -34,9 +34,6 @@ export function IAppShell(props) {
       navbar={
         <Navbar p="md" hiddenBreakpoint="sm" hidden={!opened} width={{ sm: 200, lg: 300 }}>
           <Navbar height={600} p="xs" width={{ base: 300 }}>
-            <Navbar.Section mt="xs">
-                {/* <Brand /> */}
-            </Navbar.Section>
             <Navbar.Section grow mt="md">
               <IUserLinks role={props.role} />
             </Navbar.Section>

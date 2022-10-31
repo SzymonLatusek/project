@@ -1,8 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import './App.css';
 
-import IAppShell from './IAppShell';
-import SubjectInfo from './Subjects';
+import IAppShell from './components/IAppShell';
+import SubjectInfo from './views/Subjects';
 
 export function App() {
   const roleDB = 1;

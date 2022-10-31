@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from "react-router-dom";
 import { UnstyledButton, Group, Avatar, Text, Box, useMantineTheme, ThemeIcon } from '@mantine/core';
-import { IconKey } from '@tabler/icons';
+import { IconLogout } from '@tabler/icons';
 
 
 export function IUser() {
@@ -68,7 +68,7 @@ export function IUser() {
       >
         <Group>
           <ThemeIcon color="black">
-            <IconKey size={38} />
+            <IconLogout size={38} />
           </ThemeIcon>
 
           <Text size="md" weight={600}>Wyloguj</Text>
