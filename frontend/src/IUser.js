@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from "react-router-dom";
-import { UnstyledButton, Group, Avatar, Text, Box, useMantineTheme } from '@mantine/core';
-import { IconSettings } from '@tabler/icons';
+import { UnstyledButton, Group, Avatar, Text, Box, useMantineTheme, ThemeIcon } from '@mantine/core';
+import { IconKey } from '@tabler/icons';
 
 
 export function IUser() {
@@ -15,9 +15,6 @@ export function IUser() {
         borderTop: `1px solid ${
           theme.colorScheme === 'dark' ? theme.colors.dark[4] : theme.colors.gray[2]
         }`,
-      }}
-      onClick={()=>{
-        navigate("/myaccount");
       }}
     >
       <UnstyledButton
@@ -33,6 +30,9 @@ export function IUser() {
               theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.colors.gray[0],
           },
         }}
+        onClick={()=>{
+          navigate("/myaccount");
+        }}
       >
         <Group>
           <Avatar
@@ -47,8 +47,31 @@ export function IUser() {
               zwykły użytkownik
             </Text>
           </Box>
+        </Group>
+      </UnstyledButton>
+      <UnstyledButton
+        sx={(theme) => ({
+          display: 'block',
+          width: '100%',
+          padding: theme.spacing.xs,
+          borderRadius: theme.radius.sm,
+          color: theme.colorScheme === 'dark' ? theme.colors.dark[0] : theme.black,
+  
+          '&:hover': {
+            backgroundColor:
+              theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.colors.gray[0],
+          },
+        })}
+        onClick={()=>{
+          navigate("/");
+        }}
+      >
+        <Group>
+          <ThemeIcon color="black">
+            <IconKey size={38} />
+          </ThemeIcon>
 
-          <IconSettings size={18}/>
+          <Text size="md" weight={600}>Wyloguj</Text>
         </Group>
       </UnstyledButton>
     </Box>

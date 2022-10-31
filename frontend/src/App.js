@@ -21,6 +21,7 @@ export function App() {
           {
             roleDB === 1 &&
             <>
+              <Route path={'/'} element={<IAppShell role={roleDB} contain={<div>main</div>} />} />
               <Route path={'subjects'} element={<IAppShell role={roleDB} contain={<div>subject</div>} />} />
               <Route path={'subject/:name'} element={<IAppShell role={roleDB} contain={<SubjectInfo />} />}/>
 
@@ -39,6 +40,7 @@ export function App() {
           {
             roleDB === 2 &&
             <>
+              <Route path={'/'} element={<IAppShell role={roleDB} contain={<div>main</div>} />} />
               <Route path={'/edit-users'} element={<IAppShell role={roleDB} contain={<div>edyyt</div>} />} />
             </>
           }
