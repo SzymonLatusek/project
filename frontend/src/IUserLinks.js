@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from "react-router-dom";
-import { IconDoor, IconBooks, IconSchool, IconBallpen } from '@tabler/icons';
+import { IconDoor, IconBooks, IconSchool, IconBallpen, IconKey, IconPlus } from '@tabler/icons';
 import { ThemeIcon, UnstyledButton, Group, Text } from '@mantine/core';
 
 function IUserLink({ icon, color, label, href }) {
@@ -35,6 +35,11 @@ function IUserLink({ icon, color, label, href }) {
   );
 }
 
+const unloggedData = [
+  { icon: <IconKey size={16} />, color: 'violet', label: 'Zaloguj', href: '/login' },
+  { icon: <IconPlus size={16} />, color: 'grape', label: 'Zarejestruj', href: '/register' },
+];
+
 const userData = [
   { icon: <IconBooks size={16} />, color: 'violet', label: 'Przedmioty', href: '/subjects' },
   { icon: <IconDoor size={16} />, color: 'grape', label: 'Pomieszczenia', href: '/rooms' },
@@ -50,7 +55,18 @@ const adminData = [
 ];
 
 export function IUserLinks(props) {
+  const unloggedLinks = unloggedData.map((link) => <IUserLink {...link} key={link.label} href={link.href}/>);
   const userLinks = userData.map((link) => <IUserLink {...link} key={link.label} href={link.href}/>);
   const adminLinks = adminData.map((link) => <IUserLink {...link} key={link.label} href={link.href}/>);
-  return <div>{props.admin === true ? adminLinks : userLinks}</div>;
+  switch (props.role) {
+    case 0:
+      return <div>{unloggedLinks}</div>;
+    case 1:
+      return <div>{userLinks}</div>;
+    case 2:
+      return <div>{adminLinks}</div>;
+    default:
+      return <div>{unloggedLinks}</div>;
+  }
+  
 }

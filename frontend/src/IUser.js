@@ -1,9 +1,12 @@
 import React from 'react';
-import { IconChevronRight, IconChevronLeft } from '@tabler/icons';
+import { useNavigate } from "react-router-dom";
 import { UnstyledButton, Group, Avatar, Text, Box, useMantineTheme } from '@mantine/core';
+import { IconSettings } from '@tabler/icons';
+
 
 export function IUser() {
   const theme = useMantineTheme();
+  const navigate = useNavigate();
 
   return (
     <Box
@@ -12,6 +15,9 @@ export function IUser() {
         borderTop: `1px solid ${
           theme.colorScheme === 'dark' ? theme.colors.dark[4] : theme.colors.gray[2]
         }`,
+      }}
+      onClick={()=>{
+        navigate("/myaccount");
       }}
     >
       <UnstyledButton
@@ -42,7 +48,7 @@ export function IUser() {
             </Text>
           </Box>
 
-          {theme.dir === 'ltr' ? <IconChevronRight size={18} /> : <IconChevronLeft size={18} />}
+          <IconSettings size={18}/>
         </Group>
       </UnstyledButton>
     </Box>

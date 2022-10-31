@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from "react-router-dom";
 import {
   AppShell,
   Navbar,
@@ -8,7 +9,6 @@ import {
   MediaQuery,
   Burger,
   useMantineTheme,
-  Image,
 } from '@mantine/core';
 import logo from "./img/inwentarzor-logo.png";
 
@@ -20,6 +20,8 @@ import './IAppShell.scss';
 export function IAppShell(props) {
   const theme = useMantineTheme();
   const [opened, setOpened] = useState(false);
+
+  const navigate = useNavigate();
   return (
     <AppShell
       styles={{
@@ -36,11 +38,16 @@ export function IAppShell(props) {
                 {/* <Brand /> */}
             </Navbar.Section>
             <Navbar.Section grow mt="md">
-                <IUserLinks admin={props.admin} />
+              <IUserLinks role={props.role} />
             </Navbar.Section>
-            <Navbar.Section>
-                <IUser />
-            </Navbar.Section>
+            {
+              props.role === 1 &&
+                <Navbar.Section>
+                  <IUser /> 
+                </Navbar.Section>
+            }
+              
+            
             </Navbar>
         </Navbar>
       }
@@ -63,7 +70,9 @@ export function IAppShell(props) {
               />
             </MediaQuery>
 
-            <img src={logo} alt="logo" className='logo' />
+            <img src={logo} alt="logo" className='logo' onClick={()=>{
+              navigate("/")
+            }} />
           </div>
         </Header>
       }
