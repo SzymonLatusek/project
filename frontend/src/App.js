@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import IAppShell from './components/IAppShell';
+import Login from './views/Login';
 import Registration from './views/Registration';
 import SubjectInfo from './views/Subjects';
 
@@ -13,7 +14,7 @@ export function App() {
             roleDB === 0 &&
             <>
               <Route path={'/'} element={<IAppShell role={roleDB} contain={<div>main</div>} />} />
-              <Route path={'login'} element={<IAppShell role={roleDB} contain={<div>login</div>} />}/>
+              <Route path={'login'} element={<IAppShell role={roleDB} contain={<Login />} />}/>
               <Route path={'register'} element={<IAppShell role={roleDB} contain={<Registration />} />} />
             </>
           }
