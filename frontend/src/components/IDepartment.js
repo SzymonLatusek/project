@@ -1,4 +1,4 @@
-import { Accordion, Anchor } from '@mantine/core';
+import { Accordion, Anchor, Text } from '@mantine/core';
 import { IconPlus } from '@tabler/icons';
 import { IDepartmentData } from '../exampleData/IDepartmentData';
 
@@ -16,8 +16,9 @@ export default function IDepartment() {
         }}>
           {Object.values(IDepartmentData).map(item =>(
             <Accordion.Item value={item.SHORT_NAME}>
-              <Accordion.Control>{item.NAME}</Accordion.Control>
+              <Accordion.Control w>{item.NAME}</Accordion.Control>
               <Accordion.Panel>{item.DESCRIPTION}<br />
+              <Text weight={100}>Właściciel: {item.FIRM}</Text><br />
                 <Anchor href={`/department/${item.SHORT_NAME}`} target="_blank">
                     Zobacz szczegóły
                 </Anchor>
