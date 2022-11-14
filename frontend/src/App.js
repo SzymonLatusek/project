@@ -5,7 +5,8 @@ import DepartmentInfo from './views/DeparmentInfo';
 import Departments from './views/Departments';
 import Login from './views/Login';
 import Registration from './views/Registration';
-import SubjectInfo from './views/Subjects';
+import ItemInfo from './views/ItemInfo';
+import Items from './views/Items';
 
 export function App() {
   const roleDB = 1;
@@ -25,8 +26,8 @@ export function App() {
             roleDB === 1 &&
             <>
               <Route path={'/'} element={<IAppShell role={roleDB} contain={<div>main</div>} />} />
-              <Route path={'subjects'} element={<IAppShell role={roleDB} contain={<div>subject</div>} />} />
-              <Route path={'subject/:name'} element={<IAppShell role={roleDB} contain={<SubjectInfo />} />}/>
+              <Route path={'items'} element={<IAppShell role={roleDB} contain={<Items />} />} />
+              <Route path={'item/:name'} element={<IAppShell role={roleDB} contain={<ItemInfo />} />}/>
 
               <Route path={'rooms'} element={<IAppShell role={roleDB} contain={<div>room</div>} />} />
               <Route path={'room/:name'} element={<IAppShell role={roleDB} contain={<div>room info</div>} />} />

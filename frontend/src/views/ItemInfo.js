@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom';
 
-export function SubjectInfo(){
+export function ItemInfo(){
 
 const { name } = useParams();
 
@@ -9,4 +9,4 @@ return(
 )
 }
 
-export default SubjectInfo;
+export default ItemInfo;
