@@ -1,12 +1,13 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import IAppShell from './components/IAppShell';
+import Departments from './views/Departments';
 import Login from './views/Login';
 import Registration from './views/Registration';
 import SubjectInfo from './views/Subjects';
 
 export function App() {
-  const roleDB = 0;
+  const roleDB = 1;
   return (
     <Router>
         <Routes>
@@ -29,7 +30,7 @@ export function App() {
               <Route path={'rooms'} element={<IAppShell role={roleDB} contain={<div>room</div>} />} />
               <Route path={'room/:name'} element={<IAppShell role={roleDB} contain={<div>room info</div>} />} />
 
-              <Route path={'departments'} element={<IAppShell role={roleDB} contain={<div>departaments</div>} />} />
+              <Route path={'departments'} element={<IAppShell role={roleDB} contain={<Departments />} />} />
               <Route path={'department/:name'} element={<IAppShell role={roleDB} contain={<div>departaments info JB</div>} />} />
 
               <Route path={'myaccount'} element={<IAppShell role={roleDB} contain={<div>my account</div>} />} />
