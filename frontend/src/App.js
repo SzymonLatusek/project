@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import IAppShell from './components/IAppShell';
+import DepartmentInfo from './views/DeparmentInfo';
 import Departments from './views/Departments';
 import Login from './views/Login';
 import Registration from './views/Registration';
@@ -31,7 +32,7 @@ export function App() {
               <Route path={'room/:name'} element={<IAppShell role={roleDB} contain={<div>room info</div>} />} />
 
               <Route path={'departments'} element={<IAppShell role={roleDB} contain={<Departments />} />} />
-              <Route path={'department/:name'} element={<IAppShell role={roleDB} contain={<div>departaments info JB</div>} />} />
+              <Route path={'department/:name'} element={<IAppShell role={roleDB} contain={<DepartmentInfo />} />} />
 
               <Route path={'myaccount'} element={<IAppShell role={roleDB} contain={<div>my account</div>} />} />
               <Route path={'assigment/request'} element={<IAppShell role={roleDB} contain={<div>assigment request</div>} />} />
