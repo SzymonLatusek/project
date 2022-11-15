@@ -1,11 +1,10 @@
 import { HoverCard, Text, Group } from '@mantine/core';
-import { IItemsData } from '../exampleData/IItemsData';
 
-export default function Items(){
+export default function Items(data){
     return (
         <Group>
             {
-                Object.values(IItemsData).map(item =>(
+                Object.values(data).map(item =>(
                     <HoverCard width={280} shadow="md">
                         <HoverCard.Target>
                         <Group sx={{gap: "10px"}}>

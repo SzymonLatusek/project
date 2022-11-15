@@ -66,7 +66,7 @@ export function IUser() {
           navigate("/");
         }}
       >
-        <Group>
+        <Group sx={{gap: "26px"}}>
           <ThemeIcon color="black">
             <IconLogout size={38} />
           </ThemeIcon>

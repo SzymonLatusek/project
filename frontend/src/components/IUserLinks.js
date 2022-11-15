@@ -41,8 +41,7 @@ const unloggedData = [
 ];
 
 const userData = [
-  { icon: <IconBooks size={16} />, color: 'violet', label: 'Przedmioty', href: '/items' },
-  { icon: <IconDoor size={16} />, color: 'grape', label: 'Pomieszczenia', href: '/rooms' },
+  { icon: <IconDoor size={16} />, color: 'grape', label: 'Strona główna', href: '/' },
   { icon: <IconSchool size={16} />, color: 'red', label: 'Wydziały', href: '/departments' },
   { icon: <IconBallpen size={16} />, color: 'blue', label: 'Zgłoszenia', href: '/assigment/request' },
 ];
